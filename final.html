@@ -1,4 +1,5 @@
 <style>
+    /* Base styling */
     .content {
       max-width: 600px;
       margin: auto;
@@ -6,48 +7,71 @@
     .body {
       width: 80%;
       text-align: left;
-      font-size: 1em;
+      font-size: 1.4em;
       line-height: 1.6;
       margin: 0 auto;
       display: block;
     }
     .divider {
-        /* background: linear-gradient(-355deg, #0DEFE1 0%, transparent 100%);  */
-        /* gradients don't work on outlook */
         background: #0DEFE1;
-        height: 2.5px; 
-        margin: 10px auto; 
+        height: 2.5px;
+        margin: 10px auto;
         filter: drop-shadow(3px 1px 4px #000);
         position: relative;
         display: block;
         width: 80%;
     }
-
     a {
       color: #0DEFE1;
       text-decoration: underline;
     }
+
+    /* Light mode styling */
+    @media (prefers-color-scheme: light) {
+        body {
+            background: #2C2543;
+            color: #91E9EE;
+        }
+        .content {
+            border-color: #433860;
+            background: #2C2543;
+            color: #91E9EE;
+        }
+    }
+
+    /* Dark mode styling */
+    @media (prefers-color-scheme: dark) {
+        body {
+            background: #2C2543; /* Explicit dark background */
+            color: #91E9EE;
+        }
+        .content {
+            border-color: #433860;
+            background: #2C2543;
+            color: #91E9EE;
+        }
+    }
 </style>
-  
+
 <body style="background: #2C2543; margin: 0; padding:0; font-family: 'HK Grotesk', sans-serif; font-weight: 400; color: #91E9EE;">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td align="center" style="padding: 20px;">
                 <table class="content" width="600" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: 2px solid #433860; background: #2C2543; color: #91E9EE; border-radius: 8px;">
                     <!-- Header -->
-                    <tr style="margin: 0px 0; background-image: url('https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/top-green-texture.png'); background-size: auto auto; height: 370px; background-repeat: no-repeat;">
+                    <tr style="background-image: url('https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/top-green-texture.png'); background-size: auto auto; height: 370px; background-repeat: no-repeat;">
                         <td style="text-align: center;">
-                            <a href="https://nwplus.io">
-                                <img src="https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/nwLogo.png" />
+                            <a href="https://nwplus.io" title="nwPlus Website">
+                                <img src="https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/nwLogo.png" alt="nwPlus logo" />
                             </a>
                         </td>
                     </tr>
 
                     <!-- Body -->
                     <tr>
-                        <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
+                        <td class="body" style="padding: 40px; text-align: left;">
                             <p>Hi there!</p>
-                            <p>IT'S GAME TIME. Make your next move because it's your turn to GO! apply to nwHacks 2024!</p>
+                            <p><strong>IT'S GAME TIME.</strong> Make your next move because it's your turn to GO! apply to <strong>nwHacks 2024!</strong></p>
                         </td>
                     </tr>
 
@@ -58,25 +82,24 @@
 
                     <!-- Landscape image -->
                     <tr>
-                        <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
-                            <img src="https://via.placeholder.com/600x200" alt="Landscape Image" style="width: 100%; height: auto; margin-top: 20px;" />
-                            <p>Western Canada’s LARGEST 24-hour hackathon is coming your way on January 20-21, 2024. Piece together a winning strategy as we create, learn, and explore together for the experience of a lifetime.</p>
+                        <td class="body" style="padding: 40px; text-align: left;">
+                            <img src="https://via.placeholder.com/600x200" alt="Landscape showcasing hackathon event" style="width: 100%; height: auto; margin-top: 20px;" />
+                            <p>Western Canada’s <strong>LARGEST 24-hour hackathon</strong> is coming your way on <strong>January 20-21, 2024</strong>. Piece together a winning strategy as we create, learn, and explore together for the experience of a lifetime.</p>
                             <p>This is just some more text to fill up the space.</p>
                         </td>
                     </tr>
 
                     <!-- Rounded corner container with a ribbon -->
                     <tr>
-                        <td class="body" style="padding: 0px; text-align: left; font-size: 16px; background: #433860; border-radius: 12px;">
-                            <!-- <p style="width: 0; height: 0; border-top: 30px solid #00A399; border-right: 30px solid transparent; position: relative;"></p> -->
-                            <p style="padding: 20px 20px 20px 20px;">Applications are open until December 16, 11:59 PM PST, so be sure to apply early at <a style="color:#0DEFE1;" href="nwhacks.io">nwhacks.io</a>! We hope to see you there ✨</p>
+                        <td class="body" style="padding: 0px; background: #433860; border-radius: 12px;">
+                            <p style="padding: 20px;">Applications are open until <strong>December 16, 11:59 PM PST</strong>, so be sure to apply early at <a href="https://nwhacks.io" title="nwHacks Website" style="color: #0DEFE1;">nwhacks.io</a>! We hope to see you there ✨</p>
                         </td>
                     </tr>
 
-                    <!-- Hyperlink that looks like a button with rounded corners -->
+                    <!-- Hyperlink buttons with rounded corners -->
                     <tr>
                         <td class="body" style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
-                            <a href="https://nwplus.io/" style="
+                            <a href="https://nwplus.io/" title="Apply to nwHacks" style="
                                 display: inline-block;
                                 padding: 12px 35px;
                                 font-size: 1.2em;
@@ -89,10 +112,9 @@
                         </td>
                     </tr>
 
-                    <!-- Hyperlink that looks like a button with rounded corners -->
                     <tr>
                         <td class="body" style="text-align: center; padding-top: 5px; padding-bottom: 40px;">
-                            <a href="https://nwplus.io/" style="
+                            <a href="https://www.youtube.com/" title="Visit our YouTube" style="
                                 display: inline-block;
                                 padding: 12px 35px;
                                 font-size: 1.2em;
@@ -102,7 +124,7 @@
                                 text-decoration: none;
                                 margin: 5px 10px;
                             ">YouTube</a>
-                            <a href="https://nwplus.io/" style="
+                            <a href="https://open.spotify.com/" title="Visit our Spotify" style="
                                 display: inline-block;
                                 padding: 12px 35px;
                                 font-size: 1.2em;
@@ -121,18 +143,13 @@
                     </tr>
 
                     <tr style="background-image: url('https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/red-texture.png'); background-size: auto auto; height: auto; background-repeat: no-repeat; background-position: left -20px; width: 100%;">
-                        <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
-                            <h2>HackCamp 2023 Community Spotlights</h2>
-        
-                            <p>Thank you to everyone who made HackCamp 2023 a huge success!</p>
+                        <td class="body" style="padding: 40px;">
+                            <h2><strong>HackCamp 2023 Community Spotlights</strong></h2>
+                            <p>Thank you to everyone who made <strong>HackCamp 2023</strong> a huge success!</p>
                             <p>Take a look at our collection of Community Spotlights, where we learned about our participants’ diverse stories and experiences throughout the HackCamp weekend—as 100% first-time hackers! We hope their insights will inspire you to try something new in tech.</p>
-                              
-                            <!-- 2 Hyperlinks on separate lines, target=_blank -->
-                            <p><a href="https://example.com/story1" target="_blank" style="color: #7DC5CE; text-decoration: underline;">☝️ Community Spotlight: Hackers & Mentors</a></p>
-                            <p><a href="https://example.com/story2" target="_blank" style="color: #7DC5CE; text-decoration: underline;">☝️ Community Spotlight: AgentHub & Sponsor Prize Winners</a></p>
-                            
-                            <!-- One more sentence with a hyperlink in it -->
-                            <p>Lastly, don't forget to check out our <a href="https://example.com/blog" target="_blank" style="color: #7DC5CE; text-decoration: underline;">full HackCamp Recap video</a> on YouTube!</p>
+                            <p><a href="https://example.com/story1" target="_blank" title="Hackers & Mentors" style="color: #7DC5CE;">☝️ Community Spotlight: Hackers & Mentors</a></p>
+                            <p><a href="https://example.com/story2" target="_blank" title="AgentHub & Sponsor Prize Winners" style="color: #7DC5CE;">☝️ Community Spotlight: AgentHub & Sponsor Prize Winners</a></p>
+                            <p>Lastly, don't forget to check out our <a href="https://example.com/blog" target="_blank" title="HackCamp Recap Video on YouTube" style="color: #7DC5CE;">full HackCamp Recap video</a> on YouTube!</p>
                         </td>
                     </tr>
 
@@ -143,17 +160,12 @@
 
                     <tr style="background-image: url('https://raw.githubusercontent.com/nwplus/newsletter-template/main/images/purple-texture.png'); background-size: auto auto; height: auto; background-repeat: no-repeat; background-position: right -80px; width: 100%;">
                         <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
-                            <h2>HackCamp 2023 Community Spotlights</h2>
-        
-                            <p>Thank you to everyone who made HackCamp 2023 a huge success!</p>
+                            <h2><strong>HackCamp 2023 Community Spotlights</strong></h2>
+                            <p>Thank you to everyone who made <strong>HackCamp 2023</strong> a huge success!</p>
                             <p>Take a look at our collection of Community Spotlights, where we learned about our participants’ diverse stories and experiences throughout the HackCamp weekend—as 100% first-time hackers! We hope their insights will inspire you to try something new in tech.</p>
-                              
-                            <!-- 2 Hyperlinks on separate lines, target=_blank -->
-                            <p><a href="https://example.com/story1" target="_blank" style="color: #7DC5CE; text-decoration: underline;">☝️ Community Spotlight: Hackers & Mentors</a></p>
-                            <p><a href="https://example.com/story2" target="_blank" style="color: #7DC5CE; text-decoration: underline;">☝️ Community Spotlight: AgentHub & Sponsor Prize Winners</a></p>
-                            
-                            <!-- One more sentence with a hyperlink in it -->
-                            <p>Lastly, don't forget to check out our <a href="https://example.com/blog" target="_blank" style="color: #7DC5CE; text-decoration: underline;">full HackCamp Recap video</a> on YouTube!</p>
+                            <p><a href="https://example.com/story1" target="_blank" title="Hackers & Mentors" style="color: #7DC5CE;">☝️ Community Spotlight: Hackers & Mentors</a></p>
+                            <p><a href="https://example.com/story2" target="_blank" title="AgentHub & Sponsor Prize Winners" style="color: #7DC5CE;">☝️ Community Spotlight: AgentHub & Sponsor Prize Winners</a></p>
+                            <p>Lastly, don't forget to check out our <a href="https://example.com/blog" target="_blank" title="HackCamp Recap Video on YouTube" style="color: #7DC5CE;">full HackCamp Recap video</a> on YouTube!</p>
                         </td>
                     </tr>
 
@@ -161,20 +173,18 @@
                     <tr>
                         <td class="divider"></td>
                     </tr>
-
+                    
                     <tr>
-                        <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
-                            <p>Stay tuned to hear more from our nwPlus community! ❤️</p>
-                            <p>Click <a href="https://unsubscribe.nwplus.io/{email}" target="_blank" style="color: #0DEFE1; text-decoration: underline;">here</a> to unsubscribe from our communications.</p>
-                            <p><a href="mailto:info@nwplus.io" target="_blank" style="color: #0DEFE1; text-decoration: underline;">Contact us</a> or find us on social media for the most up-to-date information.</p>
-              
+                        <td class="body" style="padding: 40px;">
+                            <p>Stay tuned to hear more from our <strong>nwPlus community</strong>! ❤️</p>
+                            <p>Click <a href="https://unsubscribe.nwplus.io/{email}" target="_blank" title="Unsubscribe from nwPlus" style="color: #0DEFE1;">here</a> to unsubscribe from our communications.</p>
+                            <p><a href="mailto:info@nwplus.io" target="_blank" title="Email us at nwPlus" style="color: #0DEFE1;">Contact us</a> or find us on social media for the most up-to-date information.</p>
                             <p>
-                              <a href="https://nwplus.io/" target="_blank" style="color: #0DEFE1; text-decoration: underline;">Website</a> | 
-                              <a href="https://www.instagram.com/nwplusubc/" target="_blank" style="color: #0DEFE1; text-decoration: underline;">Instagram</a> | 
-                              <a href="https://www.linkedin.com/company/nwplus/" target="_blank" style="color: #0DEFE1; text-decoration: underline;">LinkedIn</a> | 
-                              <a href="https://www.tiktok.com/@nwplusubc" target="_blank" style="color: #0DEFE1; text-decoration: underline;">TikTok</a> | 
-                              <a href="https://medium.com/nwplusubc" target="_blank" style="color: #0DEFE1; text-decoration: underline;">Medium</a> | 
-                              <a href="https://www.youtube.com/nwplusubc" target="_blank" style="color: #0DEFE1; text-decoration: underline;">YouTube</a>
+                                <a href="https://nwplus.io/" target="_blank" title="Visit nwPlus Website" style="color: #0DEFE1;">Website</a> |
+                                <a href="https://www.instagram.com/nwplusubc/" target="_blank" title="nwPlus Instagram" style="color: #0DEFE1;">Instagram</a> |
+                                <a href="https://www.linkedin.com/company/nwplus/" target="_blank" title="nwPlus LinkedIn" style="color: #0DEFE1;">LinkedIn</a> |
+                                <a href="https://www.tiktok.com/@nwplusubc" target="_blank" title="nwPlus TikTok" style="color: #0DEFE1;">TikTok</a> |
+                                <a href="https://medium.com/nwplusubc" target="_blank" title="nwPlus Medium" style="color: #0DEFE1;">Medium</a>
                             </p>
                         </td>
                     </tr>
